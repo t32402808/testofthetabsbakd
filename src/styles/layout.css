@@ -1,0 +1,14 @@
+.section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.gutter {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.wrapper {
+  max-width: 1080px;
+  margin: auto;
+}

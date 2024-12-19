@@ -1,0 +1,196 @@
+.gif-tv {
+  position: relative;
+  margin-right: 1rem;
+}
+
+.gif-tv .viewport {
+  position: absolute;
+  top: 9%;
+  right: 26%;
+  bottom: 15%;
+  left: 7%;
+  background: #161616;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.gif-tv .viewport .video {
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gif-tv .viewport .pixels {
+  z-index: 1;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.gif-tv .viewport .meta-left,
+.gif-tv .viewport .meta-right {
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  padding: 4% 6%;
+}
+
+.gif-tv .viewport .meta-left {
+  align-items: flex-start;
+  left: 0;
+  right: unset;
+}
+
+.gif-tv .viewport .meta-right {
+  align-items: flex-end;
+  left: unset;
+  right: 0;
+}
+
+.gif-tv .viewport span {
+  text-shadow: 0 0 3px #888;
+  font-size: 4rem;
+  font-family: VT323;
+}
+
+.gif-tv .viewport span:not(.active) {
+  display: none;
+}
+
+.gif-tv .viewport span.active {
+  display: block;
+}
+
+.gif-tv button.dial {
+  display: block;
+  position: absolute;
+  left: 85.6%;
+  transform: translateY(-50%);
+  padding: 0;
+  border-radius: 50%;
+  border: #DFDDD1 solid 3px;
+  background-color: transparent;
+  width: 10.2%;
+  line-height: 0;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.gif-tv button.dial:hover,
+.gif-tv button.dial:focus {
+  outline: none;
+}
+
+.gif-tv button.dial:hover {
+  border-color: #00aaff;
+}
+
+.gif-tv button.dial:active {
+  border-color: #007fff;
+}
+
+.gif-tv button.dial::before {
+  display: block;
+  width: 100%;
+  padding-top: 100%;
+  content: '';
+}
+
+.gif-tv button#gif_tv_button_channel { top: 56.3%; }
+.gif-tv button#gif_tv_button_volume { top: 74.6%; }
+
+.gif-tv button.switch {
+  display: block;
+  position: absolute;
+  left: 82.2%;
+  transform: translateY(-50%);
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background-color: #DFDDD1;
+  width: 1.6%;
+  line-height: 0;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.gif-tv button.switch:hover,
+.gif-tv button.switch:focus {
+  outline: none;
+  border: none;
+}
+
+.gif-tv button.switch:hover {
+  background-color: #00aaff;
+}
+
+.gif-tv button.switch:active {
+  background-color: #007fff;
+}
+
+.gif-tv button.switch::before {
+  display: block;
+  width: 100%;
+  padding-top: 100%;
+  content: '';
+}
+
+.gif-tv button#gif_tv_button_mute { top: 53.7%; }
+.gif-tv button#gif_tv_button_hd { top: 60.2%; }
+.gif-tv button#gif_tv_button_hue_shift { top: 66.5%; }
+.gif-tv button#gif_tv_button_bright { top: 72.9%; }
+.gif-tv button#gif_tv_button_color { top: 79.1%; }
+
+@keyframes rainbow_barf {
+  0% { filter: hue-rotate(0deg); }
+  25% { filter: hue-rotate(90deg); }
+  50% { filter: hue-rotate(180deg); }
+  75% { filter: hue-rotate(270deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+.cta-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform-origin: bottom left;
+  transform: translate(100%, 0) rotate(90deg);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.cta, .coming-soon {
+  text-shadow: 0 2px 8px #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.title-container {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 1;
+}
+
+.tv-title {
+  text-shadow: 0 2px 8px #999;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+  font-size: 4rem;
+  font-family: VT323;
+  color: #ccc;
+}

@@ -1,0 +1,39 @@
+html {
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
+
+  @media (min-width: 480px) and (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+body {
+  position: relative;
+  background-color: #000;
+  font-size: 1rem;
+  font-family: Roboto;
+  color: #ccc;
+}
+
+body:before {
+  position: fixed;
+  z-index: -999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('https://res.cloudinary.com/cyborgspaceviking/image/upload/v1571119521/space-background_fowfq3.jpg');
+  opacity: 0.3;
+  content: '';
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
